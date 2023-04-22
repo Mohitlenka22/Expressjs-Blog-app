@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Post Your Blog</title>
-</head>
-<body>
-    <form action="/postblogs" method="post">
-        <div class="">
-            <input type="text" name = "title" placeholder="title" >
+    <%- include('style') %>
+  </head>
+  <body>
+    <%- include('Navbar') %>
+    <div class="container">
+      <form action="/postblogs" method="post">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Enter Title</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            name="title"
+            placeholder="Enter title"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Post Blog Here</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            name="content"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Author Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            name="author"
+            placeholder="Enter Author"
+          />
         </div>
         <div class="">
-            <textarea rows="3" name="content"></textarea>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-        <div class="">
-            <input type="text" name = "author" placeholder="author" >
-        </div>
-        <div class="">
-            <button>Submit</button>
-        </div>
-    </form>
-</body>
+      </form>
+    </div>
+    <%- include('Footer') %>
+    <%- include('script') %>
+  </body>
 </html>
