@@ -1,7 +1,7 @@
 {
   "name": "expressjs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Add your own styles to Convert this code into Nice Blog application.\r version-1.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
